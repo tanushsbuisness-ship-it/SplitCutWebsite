@@ -318,132 +318,20 @@ function Hero() {
           <a href="#features" className="btn-ghost">See features ↓</a>
         </div>
         <div className="hero-phones">
-          <PhoneMockup screen="login" />
-          <PhoneMockup screen="projects" elevated />
-          <PhoneMockup screen="addmaterial" />
+          <PhoneMockup imageSrc="/simImages/simOne.png" imageAlt="SplitCut off-cut screen" />
+          <PhoneMockup imageSrc="/simImages/simTwo.png" imageAlt="SplitCut bookshelf screen" elevated />
+          <PhoneMockup imageSrc="/simImages/simThree.png" imageAlt="SplitCut add material screen" />
         </div>
       </div>
     </section>
   );
 }
 
-function PhoneMockup({ screen, elevated }) {
-  const screens = {
-    login: <LoginScreen />,
-    projects: <ProjectsScreen />,
-    addmaterial: <AddMaterialScreen />,
-  };
+function PhoneMockup({ imageSrc, imageAlt, elevated }) {
   return (
     <div className={`phone-wrap ${elevated ? 'elevated' : ''}`}>
       <div className="phone">
-        <div className="phone-notch" />
-        <div className="phone-screen">{screens[screen]}</div>
-      </div>
-    </div>
-  );
-}
-
-function LoginScreen() {
-  return (
-    <div className="mock-login">
-      <div className="mock-login-bg" />
-      <div className="mock-login-content">
-        <div className="mock-app-title">SplitCut</div>
-        <div className="mock-app-sub">
-          Optimize sheet cuts, reuse matching scrap, and keep your shop inventory in one place.
-        </div>
-        <div className="mock-btn-apple">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-          </svg>
-          Continue with Apple
-        </div>
-        <div className="mock-btn-google">
-          <span className="mock-g">G</span> Sign in with Google
-        </div>
-        <div className="mock-btn-skip">Use without data storage</div>
-      </div>
-    </div>
-  );
-}
-
-function ProjectsScreen() {
-  return (
-    <div className="mock-projects">
-      <div className="mock-nav-bar">
-        <div className="mock-nav-pill">Sign Out</div>
-        <div style={{ display: 'flex', gap: 6 }}>
-          <div className="mock-nav-pill">♛</div>
-          <div className="mock-nav-pill">+</div>
-        </div>
-      </div>
-      <div className="mock-title">Projects</div>
-      <div className="mock-card">
-        <div>
-          <div className="mock-card-name">Shelf</div>
-          <div className="mock-card-sub">0 material(s) · 0 piece(s)</div>
-        </div>
-        <span className="mock-chevron">›</span>
-      </div>
-      <div className="mock-tabs">
-        <div className="mock-tab active">
-          <div className="mock-tab-icon">📁</div>
-          <div>Projects</div>
-        </div>
-        <div className="mock-tab">
-          <div className="mock-tab-icon">📥</div>
-          <div>Scrap Bin</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function AddMaterialScreen() {
-  return (
-    <div className="mock-addmat">
-      <div className="mock-topbar">
-        <div className="mock-topbar-pill">Cancel</div>
-        <div className="mock-topbar-title">Add Material</div>
-        <div className="mock-topbar-pill">Save</div>
-      </div>
-      <div className="mock-section-label">Quick Fill</div>
-      <div className="mock-quick-fill">
-        <div className="mock-quick-row">
-          <span className="mock-quick-icon">⊹</span>
-          <span className="mock-link-text">Measure with AR Camera</span>
-        </div>
-        <div className="mock-divider" />
-        <div className="mock-quick-row">
-          <span className="mock-quick-icon">📥</span>
-          <span className="mock-link-text">Pick from Scrap Bin</span>
-        </div>
-      </div>
-      <div className="mock-section-label">Material Info</div>
-      <div className="mock-fields">
-        <div className="mock-field-placeholder">Name (e.g. 3/4&quot; Birch Ply)</div>
-        <div className="mock-divider" />
-        <div className="mock-field-row">
-          <span>Type</span><span className="mock-field-val">Sheet ⌃</span>
-        </div>
-        <div className="mock-divider" />
-        <div className="mock-field-row">
-          <span>Common Size</span><span className="mock-field-val">Custom ⌃</span>
-        </div>
-      </div>
-      <div className="mock-section-label">Dimensions (inches)</div>
-      <div className="mock-fields">
-        <div className="mock-field-row"><span>Width</span><span className="mock-field-val">48 &quot;</span></div>
-        <div className="mock-divider" />
-        <div className="mock-field-row"><span>Height / Length</span><span className="mock-field-val">96 &quot;</span></div>
-        <div className="mock-divider" />
-        <div className="mock-field-row"><span>Quantity</span><span className="mock-field-val">1</span></div>
-      </div>
-      <div className="mock-section-label">Appearance</div>
-      <div className="mock-wood-swatches">
-        {['#d4a55a', '#e8c98a', '#b8956a', '#c8a870', '#8b3a2a', '#4a2010'].map((c, i) => (
-          <div key={i} className={`mock-swatch ${i === 0 ? 'active' : ''}`} style={{ background: c }} />
-        ))}
+        <img className="phone-image" src={imageSrc} alt={imageAlt} />
       </div>
     </div>
   );
@@ -543,10 +431,10 @@ function ScrapSection() {
             <div className="scrap-board">
               <div className="scrap-board-label">Scrap Bin</div>
               {[
-                { w: 80, h: 50, color: '#d4a55a', label: '18 × 24"' },
-                { w: 60, h: 40, color: '#8b3a2a', label: '12 × 18"' },
-                { w: 100, h: 30, color: '#b8956a', label: '24 × 12"' },
-                { w: 70, h: 60, color: '#4a7a4a', label: '16 × 20"' },
+                { w: 80, h: 50, color: '#74d2ff', label: '18 × 24"' },
+                { w: 60, h: 40, color: '#2d8cff', label: '12 × 18"' },
+                { w: 100, h: 30, color: '#5aa7ff', label: '24 × 12"' },
+                { w: 70, h: 60, color: '#1f58d6', label: '16 × 20"' },
               ].map((p, i) => (
                 <div key={i} className="scrap-piece" style={{ width: p.w, height: p.h, background: p.color }}>
                   <span className="scrap-piece-label">{p.label}</span>
@@ -608,6 +496,24 @@ function CTA() {
 }
 
 function Footer() {
+  const handleSupportClick = async (event) => {
+    event.preventDefault();
+
+    const mailto = `mailto:${SUPPORT_EMAIL}?subject=SplitCut%20Support`;
+    window.location.href = mailto;
+
+    try {
+      await navigator.clipboard.writeText(SUPPORT_EMAIL);
+      window.setTimeout(() => {
+        window.alert(`Support email copied: ${SUPPORT_EMAIL}`);
+      }, 120);
+    } catch (error) {
+      window.setTimeout(() => {
+        window.alert(`Email us at ${SUPPORT_EMAIL}`);
+      }, 120);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -620,7 +526,9 @@ function Footer() {
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
             <a href="/account-deletion">Account Deletion</a>
-            <a href={`mailto:${SUPPORT_EMAIL}`}>Support</a>
+            <button type="button" className="footer-support" onClick={handleSupportClick}>
+              Support
+            </button>
           </div>
           <div className="footer-copy">© {new Date().getFullYear()} SplitCut. All rights reserved.</div>
         </div>
