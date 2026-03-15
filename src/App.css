@@ -14,7 +14,7 @@
   z-index: 100;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(7, 19, 38, 0.82);
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
@@ -45,7 +45,7 @@
 }
 .nav-cta {
   background: var(--accent);
-  color: #06203f;
+  color: var(--button-text);
   font-size: 14px;
   font-weight: 600;
   padding: 9px 20px;
@@ -107,7 +107,7 @@
   align-items: center;
   gap: 10px;
   background: var(--accent);
-  color: #06203f;
+  color: var(--button-text);
   font-size: 16px;
   font-weight: 700;
   padding: 16px 32px;
@@ -153,8 +153,8 @@
 }
 .hero-badge {
   display: inline-block;
-  background: rgba(127,209,255,0.12);
-  border: 1px solid rgba(127,209,255,0.25);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft-border);
   color: var(--accent);
   font-size: 13px;
   font-weight: 600;
@@ -206,7 +206,7 @@
 }
 .phone {
   width: 200px;
-  background: #fff;
+  background: var(--surface-strong);
   border-radius: 36px;
   border: 1.5px solid rgba(255,255,255,0.12);
   overflow: hidden;
@@ -283,8 +283,8 @@
   margin-bottom: 14px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(127,209,255,0.12);
-  border: 1px solid rgba(127,209,255,0.24);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft-border);
   color: var(--accent);
   font-size: 12px;
   font-weight: 700;
@@ -323,7 +323,7 @@
 }
 .legal-section p,
 .legal-section li {
-  color: #d5d5d5;
+  color: var(--text2);
   font-size: 16px;
   line-height: 1.85;
 }
@@ -568,8 +568,8 @@
   appearance: none;
   padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(127,209,255,0.12);
-  border: 1px solid rgba(127,209,255,0.22);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft-border);
   color: var(--accent);
   font: inherit;
   font-size: 14px;
@@ -578,7 +578,7 @@
   transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
 .footer-support:hover {
-  color: #06203f;
+  color: var(--button-text);
   background: var(--accent);
 }
 .footer-copy {
