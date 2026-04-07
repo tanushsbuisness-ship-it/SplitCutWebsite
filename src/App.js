@@ -4,7 +4,7 @@ const SUPPORT_EMAIL = 'tanushsbuisness@gmail.com';
 const WEBSITE_URL = 'https://splitcut.netlify.app';
 const DEVELOPER_NAME = 'Tanush Shrivastava';
 const LAST_UPDATED = 'March 15, 2026';
-const APP_STORE_URL = 'https://apps.apple.com';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/splitcut/id6760597327';
 
 const PRIVACY_SECTIONS = [
   {
