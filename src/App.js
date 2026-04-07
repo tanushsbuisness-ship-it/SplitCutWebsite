@@ -1,5 +1,111 @@
 import './App.css';
 
+/* ── Icon components (stroke-based, monochrome) ── */
+const IconFolder = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+  </svg>
+);
+const IconLayoutGrid = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="7" height="7"/>
+    <rect x="14" y="3" width="7" height="7"/>
+    <rect x="14" y="14" width="7" height="7"/>
+    <rect x="3" y="14" width="7" height="7"/>
+  </svg>
+);
+const IconRefreshCw = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="23 4 23 10 17 10"/>
+    <polyline points="1 20 1 14 7 14"/>
+    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+  </svg>
+);
+const IconCamera = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+    <circle cx="12" cy="13" r="4"/>
+  </svg>
+);
+const IconPrinter = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9"/>
+    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+    <rect x="6" y="14" width="12" height="8"/>
+  </svg>
+);
+const IconCloudUpload = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="16 16 12 12 8 16"/>
+    <line x1="12" y1="12" x2="12" y2="21"/>
+    <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+  </svg>
+);
+const IconShapes = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="8" height="8"/>
+    <circle cx="18" cy="6" r="4"/>
+    <path d="M2 22l5-10 5 10z"/>
+    <line x1="14" y1="16" x2="22" y2="16"/>
+    <line x1="18" y1="12" x2="18" y2="20"/>
+  </svg>
+);
+const IconLayers = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+    <polyline points="2 17 12 22 22 17"/>
+    <polyline points="2 12 12 17 22 12"/>
+  </svg>
+);
+const IconSaw = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="9" width="20" height="6" rx="1"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M6 9V6M9 9V7M12 9V5M15 9V7M18 9V6"/>
+  </svg>
+);
+const IconPanel = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2"/>
+    <line x1="2" y1="8" x2="22" y2="8"/>
+    <line x1="2" y1="13" x2="22" y2="13"/>
+    <line x1="8" y1="3" x2="8" y2="17"/>
+  </svg>
+);
+const IconScissors = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="6" cy="6" r="3"/>
+    <circle cx="6" cy="18" r="3"/>
+    <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+    <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+    <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+  </svg>
+);
+const IconWrench = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </svg>
+);
+const IconArrowUp = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"/>
+    <polyline points="5 12 12 5 19 12"/>
+  </svg>
+);
+const IconRecycle = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="23 4 23 10 17 10"/>
+    <polyline points="1 20 1 14 7 14"/>
+    <path d="M3.51 9a9 9 0 1 0 .49-4.7"/>
+  </svg>
+);
+const IconX = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+);
+
 const SUPPORT_EMAIL = 'tanushsbuisness@gmail.com';
 const WEBSITE_URL = 'https://splitcut.netlify.app';
 const DEVELOPER_NAME = 'Tanush Shrivastava';
@@ -95,8 +201,8 @@ const PRIVACY_SECTIONS = [
   {
     title: '6. Account Deletion',
     paragraphs: [
-      'At this time, SplitCut does not provide an in-app self-service account deletion feature.',
-      `If you would like your account deleted, you may contact us at ${SUPPORT_EMAIL}. Upon request, we can delete your account from Firebase on our side.`,
+      'You can delete your account directly within the App by going to Settings → Account → Delete Account.',
+      `If you are unable to access the in-app option, you may also contact us at ${SUPPORT_EMAIL} and we can delete your account from Firebase on our side.`,
       'Deleting your account will remove your authentication access to the App. Data stored locally on your device may still remain on your device unless you delete it within the App or remove the App from your device.',
     ],
   },
@@ -195,7 +301,7 @@ const TERMS_SECTIONS = [
   {
     title: '6. Account Deletion and Termination',
     paragraphs: [
-      `At this time, users cannot delete their accounts directly from within the App. If you want your account deleted, you may contact us at ${SUPPORT_EMAIL}, and we may delete your account from Firebase on our side.`,
+      `You can delete your account directly within the App by going to Settings → Account → Delete Account. If you are unable to access this option, contact us at ${SUPPORT_EMAIL} and we can delete your account from Firebase on our side.`,
       'We may suspend or terminate access to the App if necessary for security, abuse prevention, legal compliance, or technical reasons.',
     ],
   },
@@ -338,14 +444,14 @@ function PhoneMockup({ imageSrc, imageAlt, elevated }) {
 }
 
 const FEATURES = [
-  { icon: '🗂', title: 'Project Organization', desc: 'Create projects with custom materials and required cut pieces. Everything in one place.' },
-  { icon: '📐', title: 'Waste Optimization', desc: 'Automatically optimize cut layouts across full sheets and boards to minimize waste.' },
-  { icon: '♻️', title: 'Scrap Reuse', desc: 'Save leftover pieces to your Scrap Bin and reuse them in future projects automatically.' },
-  { icon: '📷', title: 'AR Camera Measure', desc: 'Use your iPhone camera to measure a physical board with augmented reality with no tape needed.' },
-  { icon: '📄', title: 'PDF Export & Print', desc: 'Export cut plans to PDF. Print scaled to A4 or tile full-size layouts across multiple pages.' },
-  { icon: '☁️', title: 'Cloud Sync', desc: 'Sign in with Apple or Google and your projects sync across all your devices automatically.' },
-  { icon: '🔷', title: 'Multiple Shapes', desc: 'Pieces can be rectangles, triangles, circles, semicircles, or quarter circles and all render accurately.' },
-  { icon: '🪵', title: 'Material Types', desc: 'Works for plywood, hardwood boards, fabric panels, and more. Common stock size presets included.' },
+  { icon: <IconFolder />, title: 'Project Organization', desc: 'Create projects with custom materials and required cut pieces. Everything in one place.' },
+  { icon: <IconLayoutGrid />, title: 'Waste Optimization', desc: 'Automatically optimize cut layouts across full sheets and boards to minimize waste.' },
+  { icon: <IconRefreshCw />, title: 'Scrap Reuse', desc: 'Save leftover pieces to your Scrap Bin and reuse them in future projects automatically.' },
+  { icon: <IconCamera />, title: 'AR Camera Measure', desc: 'Use your iPhone camera to measure a physical board with augmented reality with no tape needed.' },
+  { icon: <IconPrinter />, title: 'PDF Export & Print', desc: 'Export cut plans to PDF. Print scaled to A4 or tile full-size layouts across multiple pages.' },
+  { icon: <IconCloudUpload />, title: 'Cloud Sync', desc: 'Sign in with Apple or Google and your projects sync across all your devices automatically.' },
+  { icon: <IconShapes />, title: 'Multiple Shapes', desc: 'Pieces can be rectangles, triangles, circles, semicircles, or quarter circles and all render accurately.' },
+  { icon: <IconLayers />, title: 'Material Types', desc: 'Works for plywood, hardwood boards, fabric panels, and more. Common stock size presets included.' },
 ];
 
 function Features() {
@@ -413,9 +519,9 @@ function ScrapSection() {
             </p>
             <div className="scrap-behaviors">
               {[
-                { icon: '⬆', label: 'Use scrap first', desc: 'Prefer saved pieces before new material' },
-                { icon: '♻', label: 'Only use scrap', desc: 'Never touch new material in this project' },
-                { icon: '✕', label: 'Do not use scrap', desc: 'Always cut from fresh stock' },
+                { icon: <IconArrowUp />, label: 'Use scrap first', desc: 'Prefer saved pieces before new material' },
+                { icon: <IconRecycle />, label: 'Only use scrap', desc: 'Never touch new material in this project' },
+                { icon: <IconX />, label: 'Do not use scrap', desc: 'Always cut from fresh stock' },
               ].map((b) => (
                 <div key={b.label} className="scrap-behavior">
                   <div className="scrap-behavior-icon">{b.icon}</div>
@@ -450,10 +556,10 @@ function ScrapSection() {
 
 function UseCases() {
   const cases = [
-    { icon: '🪵', title: 'Woodworking', desc: 'Cabinets, shelves, furniture. Optimize your plywood and solid wood cuts.' },
-    { icon: '🏗', title: 'Fabrication', desc: 'Panel cutting, metal sheets, and composite materials for construction or manufacturing.' },
-    { icon: '🪡', title: 'Fabric & Sewing', desc: 'Plan fabric cuts for quilting, upholstery, and apparel with less waste.' },
-    { icon: '🔨', title: 'DIY & Makers', desc: 'Any project requiring cut-down sheet goods benefits from a proper cut plan.' },
+    { icon: <IconSaw />, title: 'Woodworking', desc: 'Cabinets, shelves, furniture. Optimize your plywood and solid wood cuts.' },
+    { icon: <IconPanel />, title: 'Fabrication', desc: 'Panel cutting, metal sheets, and composite materials for construction or manufacturing.' },
+    { icon: <IconScissors />, title: 'Fabric & Sewing', desc: 'Plan fabric cuts for quilting, upholstery, and apparel with less waste.' },
+    { icon: <IconWrench />, title: 'DIY & Makers', desc: 'Any project requiring cut-down sheet goods benefits from a proper cut plan.' },
   ];
   return (
     <section className="use-cases">
@@ -628,15 +734,15 @@ function AccountDeletionPage() {
     >
       <section className="legal-section">
         <h2>Account Deletion</h2>
-        <p>At this time, SplitCut does not support in-app self-service account deletion.</p>
-        <p>If you would like your account deleted, please send a request to:</p>
+        <p>You can delete your account directly within the App by going to <strong>Settings → Account → Delete Account</strong>.</p>
+        <p>If you are unable to access the in-app option, you can also send a deletion request to:</p>
         <p>
           <a className="legal-link" href={`mailto:${SUPPORT_EMAIL}`}>
             {SUPPORT_EMAIL}
           </a>
         </p>
-        <p>Please include the email address associated with your SplitCut account.</p>
-        <p>Once your request is processed, your account can be deleted from Firebase on our side.</p>
+        <p>Please include the email address associated with your SplitCut account so we can locate it.</p>
+        <p>Once processed, your account will be deleted from Firebase.</p>
       </section>
 
       <section className="legal-section">
